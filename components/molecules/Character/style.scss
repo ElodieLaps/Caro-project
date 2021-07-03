@@ -1,0 +1,15 @@
+.character {
+  margin: 20px;
+  &__name {
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  &__gender {
+    margin-left: 5px;
+  }
+  &__item {
+    span {
+      font-weight: 500;
+    }
+  }
+}

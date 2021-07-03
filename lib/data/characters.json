@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "caroline",
+    "gender": "F",
+    "race": "HUM",
+    "role": "MAGE",
+    "level": 1
+  },
+  {
+    "id": 2,
+    "name": "élodie",
+    "gender": "F",
+    "race": "ELF",
+    "role": "PRST",
+    "level": 5
+  },
+  {
+    "id": 3,
+    "name": "bryann",
+    "gender": "M",
+    "race": "DWA",
+    "role": "WARR",
+    "level": 100
+  },
+  {
+    "id": 4,
+    "name": "jamal",
+    "gender": "M",
+    "race": "HUM",
+    "role": "MAGE",
+    "level": 150
+  }
+]
