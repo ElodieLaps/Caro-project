@@ -1,4 +1,5 @@
 import Character from "../../../lib/models/Character";
+import Statbar from "../../atoms/Statbar";
 
 type CharacterCardType = {
    character: Character;
@@ -23,6 +24,9 @@ const CharacterCard = ({ character }: CharacterCardType) => {
             <span>classe: </span>
             {character.getRole()}
          </p>
+         <Statbar
+            statistic={character.health}
+         />
       </div >
    )
 }

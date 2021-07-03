@@ -1,3 +1,5 @@
+import Statistic from "./Statistic";
+
 export default class Character {
   id;
   name;
@@ -5,13 +7,15 @@ export default class Character {
   race;
   role;
   level;
+  health;
   constructor(
     id: number,
     name: string,
     gender: string,
     race: string,
     role: string,
-    level: number
+    level: number,
+    health: Statistic
   ) {
     this.id = id;
     this.name = name;
@@ -19,6 +23,7 @@ export default class Character {
     this.race = race;
     this.role = role;
     this.level = level;
+    this.health = health;
   }
 
   getGender = () => {
@@ -68,7 +73,13 @@ export const getCharacters = (characters: Array<any>): Array<Character> => {
       character.gender,
       character.race,
       character.role,
-      character.level
+      character.level,
+      new Statistic(
+        "points de vie",
+        character.health.max,
+        character.health.current,
+        character.health.regen
+      )
     );
     charactersList.push(newCharacter);
   });

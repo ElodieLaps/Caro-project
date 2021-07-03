@@ -1,0 +1,18 @@
+.statistic {
+  &__label {
+    font-weight: 500;
+  }
+  &__container {
+    width: 200px;
+    height: 10x;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid gray;
+    overflow: hidden;
+  }
+  &__bar {
+    max-width: 200px;
+    height: 10px;
+    background-color: green;
+  }
+}

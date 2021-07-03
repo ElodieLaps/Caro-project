@@ -5,7 +5,12 @@
     "gender": "F",
     "race": "HUM",
     "role": "MAGE",
-    "level": 1
+    "level": 1,
+    "health": {
+      "max": 100,
+      "current": 35,
+      "regen": 2
+    }
   },
   {
     "id": 2,
@@ -13,7 +18,12 @@
     "gender": "F",
     "race": "ELF",
     "role": "PRST",
-    "level": 5
+    "level": 5,
+    "health": {
+      "max": 180,
+      "current": 58,
+      "regen": 5
+    }
   },
   {
     "id": 3,
@@ -21,7 +31,12 @@
     "gender": "M",
     "race": "DWA",
     "role": "WARR",
-    "level": 100
+    "level": 100,
+    "health": {
+      "max": 500,
+      "current": 362,
+      "regen": 15
+    }
   },
   {
     "id": 4,
@@ -29,6 +44,11 @@
     "gender": "M",
     "race": "HUM",
     "role": "MAGE",
-    "level": 150
+    "level": 150,
+    "health": {
+      "max": 800,
+      "current": 400,
+      "regen": 20
+    }
   }
 ]
