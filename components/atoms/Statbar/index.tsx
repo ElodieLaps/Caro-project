@@ -7,15 +7,15 @@ type StatisticType = {
 const Statbar = ({ statistic }: StatisticType) => {
 
    const style = {
-      width: `${((statistic.current / statistic.max) * 100)}%`
+      width: `${((statistic.current / statistic.max) * 100)}%`,
    }
 
    return (
       <div className="statistic">
          <p className="statistic__label">{statistic.label}: </p>
-         <p>{statistic.current} / {statistic.max} pts</p>
+         <p className="statistic__values">{statistic.current} / {statistic.max} pts</p>
          <div className="statistic__container">
-            <div className="statistic__bar" style={style}></div>
+            <div className={`statistic__bar ${statistic.type}`} style={style}></div>
          </div>
       </div>
    )

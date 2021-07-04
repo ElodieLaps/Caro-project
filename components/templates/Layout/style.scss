@@ -1,5 +1,7 @@
+@import "../../../styles/variables.scss";
+
 .layout {
-  background-color: bisque;
+  background-color: $silver-white;
   min-height: 100vh;
   width: 100%;
 }

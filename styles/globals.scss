@@ -1,13 +1,18 @@
+// reset
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
 @import "../components/templates/Layout/style.scss";
 @import "../components/templates/Home/style.scss";
 @import "../components/organisms/CharactersList/style.scss";
 @import "../components/molecules/Character/style.scss";
 @import "../components/atoms/Statbar/style.scss";
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }

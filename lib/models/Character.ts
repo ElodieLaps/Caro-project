@@ -8,6 +8,7 @@ export default class Character {
   role;
   level;
   health;
+  mana;
   constructor(
     id: number,
     name: string,
@@ -15,7 +16,8 @@ export default class Character {
     race: string,
     role: string,
     level: number,
-    health: Statistic
+    health: Statistic,
+    mana: Statistic
   ) {
     this.id = id;
     this.name = name;
@@ -24,6 +26,7 @@ export default class Character {
     this.role = role;
     this.level = level;
     this.health = health;
+    this.mana = mana;
   }
 
   getGender = () => {
@@ -75,10 +78,18 @@ export const getCharacters = (characters: Array<any>): Array<Character> => {
       character.role,
       character.level,
       new Statistic(
+        "health",
         "points de vie",
         character.health.max,
         character.health.current,
         character.health.regen
+      ),
+      new Statistic(
+        "mana",
+        "point de mana",
+        character.mana.max,
+        character.mana.current,
+        character.mana.regen
       )
     );
     charactersList.push(newCharacter);

@@ -24,9 +24,9 @@ const CharacterCard = ({ character }: CharacterCardType) => {
             <span>classe: </span>
             {character.getRole()}
          </p>
-         <Statbar
-            statistic={character.health}
-         />
+         <Statbar statistic={character.health} />
+         <Statbar statistic={character.mana} />
+
       </div >
    )
 }

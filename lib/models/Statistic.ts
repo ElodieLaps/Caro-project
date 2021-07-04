@@ -1,9 +1,17 @@
 class Statistic {
+  type: string;
   label: string;
   max;
   current;
   regen;
-  constructor(label: string, max: number, current: number, regen: number) {
+  constructor(
+    type: string,
+    label: string,
+    max: number,
+    current: number,
+    regen: number
+  ) {
+    this.type = type;
     this.label = label;
     this.max = max;
     this.current = current;

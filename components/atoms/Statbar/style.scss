@@ -1,18 +1,31 @@
+@import "../../../styles/variables.scss";
+
+$max-width: 150px;
+
 .statistic {
   &__label {
-    font-weight: 500;
+    font-weight: 700;
+  }
+  &__values {
+    font-size: 12px;
   }
   &__container {
-    width: 200px;
-    height: 10x;
+    width: $max-width;
+    height: 8px;
     background-color: white;
     border-radius: 10px;
-    border: 1px solid gray;
+    border: 1px solid $grey-light;
     overflow: hidden;
   }
   &__bar {
-    max-width: 200px;
-    height: 10px;
-    background-color: green;
+    max-width: $max-width;
+    height: 8px;
+  }
+
+  .health {
+    background-color: $green-health;
+  }
+  .mana {
+    background-color: $blue-mana;
   }
 }
