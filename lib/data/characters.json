@@ -7,12 +7,12 @@
     "role": "MAGE",
     "level": 1,
     "health": {
-      "max": 100,
+      "max": 150,
       "current": 35,
       "regen": 2
     },
     "mana": {
-      "max": 50,
+      "max": 30,
       "current": 23,
       "regen": 2
     }
