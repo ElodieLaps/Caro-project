@@ -1,10 +1,11 @@
+import Experience from "../../../lib/models/Experience";
 import Statistic from "../../../lib/models/Statistic";
 
-type StatisticType = {
-   statistic: Statistic
+type StatbarType = {
+   statistic: Statistic | Experience;
 }
 
-const Statbar = ({ statistic }: StatisticType) => {
+const Statbar = ({ statistic }: StatbarType) => {
 
    const style = {
       width: `${((statistic.current / statistic.max) * 100)}%`,

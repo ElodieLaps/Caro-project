@@ -1,4 +1,6 @@
+import Experience from "./Experience";
 import Statistic from "./Statistic";
+import Statistics from "./Statistics";
 
 export default class Character {
   id;
@@ -7,8 +9,8 @@ export default class Character {
   race;
   role;
   level;
-  health;
-  mana;
+  experience;
+  statistics;
   constructor(
     id: number,
     name: string,
@@ -16,8 +18,8 @@ export default class Character {
     race: string,
     role: string,
     level: number,
-    health: Statistic,
-    mana: Statistic
+    experience: Experience,
+    statistics: Statistics
   ) {
     this.id = id;
     this.name = name;
@@ -25,8 +27,8 @@ export default class Character {
     this.race = race;
     this.role = role;
     this.level = level;
-    this.health = health;
-    this.mana = mana;
+    this.experience = experience;
+    this.statistics = statistics;
   }
 
   getGender = () => {
@@ -65,31 +67,112 @@ export default class Character {
         "Ø";
     }
   };
+
+  getMaxHealth = () => {};
 }
 
 export const getCharacters = (characters: Array<any>): Array<Character> => {
   const charactersList: Array<Character> = [];
+
   characters.forEach((character: any) => {
-    let newCharacter = new Character(
+    const newCharacter = new Character(
       character.id,
       character.name,
       character.gender,
       character.race,
       character.role,
       character.level,
-      new Statistic(
-        "health",
-        "points de vie",
-        character.health.max,
-        character.health.current,
-        character.health.regen
+      new Experience(
+        "exp",
+        "experience",
+        character.experience.toNextlvl,
+        character.experience.current
       ),
-      new Statistic(
-        "mana",
-        "point de mana",
-        character.mana.max,
-        character.mana.current,
-        character.mana.regen
+      new Statistics(
+        new Statistic(
+          "health",
+          "points de vie",
+          character.statistics.health.max,
+          character.statistics.health.current,
+          character.statistics.health.progress_index
+        ),
+        new Statistic(
+          "health-regen",
+          "guérison",
+          character.statistics.health_regen.value,
+          character.statistics.health_regen.value,
+          character.statistics.health_regen.progress_index
+        ),
+        new Statistic(
+          "mana",
+          "points de mana",
+          character.statistics.mana.max,
+          character.statistics.mana.current,
+          character.statistics.mana.progress_index
+        ),
+        new Statistic(
+          "mana-regen",
+          "régénération",
+          character.statistics.mana_regen.value,
+          character.statistics.mana_regen.value,
+          character.statistics.mana_regen.progress_index
+        ),
+        new Statistic(
+          "attack-damages",
+          "dégâts physiques",
+          character.statistics.attack_damages.value,
+          character.statistics.attack_damages.value,
+          character.statistics.attack_damages.progress_index
+        ),
+        new Statistic(
+          "dark-power",
+          "magie noire",
+          character.statistics.dark_power.value,
+          character.statistics.dark_power.value,
+          character.statistics.dark_power.progress_index
+        ),
+        new Statistic(
+          "light-power",
+          "magie sacrée",
+          character.statistics.light_power.value,
+          character.statistics.light_power.value,
+          character.statistics.light_power.progress_index
+        ),
+        new Statistic(
+          "armor",
+          "armure",
+          character.statistics.armor.value,
+          character.statistics.armor.value,
+          character.statistics.armor.progress_index
+        ),
+        new Statistic(
+          "protection",
+          "protection",
+          character.statistics.protection.value,
+          character.statistics.protection.value,
+          character.statistics.protection.progress_index
+        ),
+        new Statistic(
+          "blessing",
+          "bénédiction",
+          character.statistics.blessing.value,
+          character.statistics.blessing.value,
+          character.statistics.blessing.progress_index
+        ),
+        new Statistic(
+          "swiftness",
+          "rapidité",
+          character.statistics.swiftness.value,
+          character.statistics.swiftness.value,
+          character.statistics.swiftness.progress_index
+        ),
+        new Statistic(
+          "dodge",
+          "esquive",
+          character.statistics.dodge.value,
+          character.statistics.dodge.value,
+          character.statistics.dodge.progress_index
+        )
       )
     );
     charactersList.push(newCharacter);

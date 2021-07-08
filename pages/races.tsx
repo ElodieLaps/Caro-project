@@ -1,23 +1,25 @@
 import Layout from '../components/templates/Layout';
 import { InferGetStaticPropsType } from 'next';
-import { HomeProps } from '../components/templates/Home';
-import HomeContent from '../components/templates/Home';
-import characterApi from '../lib/api/character';
+import raceApi from '../lib/api/race';
 
 type pageProps = {
    pageTitle: string,
-   content: HomeProps
+   content: any
 }
 
 export const getStaticProps = async () => {
+
    const pageTitle = "Races"
    const title = "Les races"
+   const races = await raceApi.getAllRaces();
+
    return {
       props: {
          pageTitle,
          content: {
-            title: title
-         }
+            title: title,
+            races: races
+         } as unknown
       } as pageProps,
    }
 }
@@ -26,11 +28,8 @@ const Race = ({ pageTitle, content }: InferGetStaticPropsType<typeof getStaticPr
    return (
       <div>
          <Layout pageTitle={pageTitle}>
-            {  /*<HomeContent
-               title={content.title}
-               characters={content.characters}
-            />*/}
             <h1>{content.title}</h1>
+            {console.log('races', content.races)}
          </Layout>
       </div>
    )

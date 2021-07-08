@@ -3,19 +3,19 @@ class Statistic {
   label: string;
   max;
   current;
-  regen;
+  progress_index;
   constructor(
     type: string,
     label: string,
     max: number,
-    current: number,
-    regen: number
+    progress_index: number,
+    current?: number
   ) {
     this.type = type;
     this.label = label;
     this.max = max;
     this.current = current;
-    this.regen = regen;
+    this.progress_index = progress_index;
   }
 }
 

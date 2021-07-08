@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
          content: {
             title: title,
             characters: characters
-         }
+         } as unknown
       } as pageProps,
    }
 }

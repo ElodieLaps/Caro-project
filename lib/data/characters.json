@@ -6,15 +6,61 @@
     "race": "HUM",
     "role": "MAGE",
     "level": 1,
-    "health": {
-      "max": 150,
-      "current": 35,
-      "regen": 2
+    "experience": {
+      "toNextlvl": 100,
+      "current": 12
     },
-    "mana": {
-      "max": 30,
-      "current": 23,
-      "regen": 2
+    "statistics": {
+      "health": {
+        "max": 150,
+        "current": 35,
+        "progress_index": 2
+      },
+      "mana": {
+        "max": 30,
+        "current": 23,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
     }
   },
   {
@@ -24,15 +70,61 @@
     "race": "ELF",
     "role": "PRST",
     "level": 5,
-    "health": {
-      "max": 180,
-      "current": 58,
-      "regen": 5
+    "experience": {
+      "toNextlvl": 180,
+      "current": 170
     },
-    "mana": {
-      "max": 100,
-      "current": 50,
-      "regen": 2
+    "statistics": {
+      "health": {
+        "max": 150,
+        "current": 35,
+        "progress_index": 2
+      },
+      "mana": {
+        "max": 30,
+        "current": 23,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
     }
   },
   {
@@ -42,15 +134,61 @@
     "race": "DWA",
     "role": "WARR",
     "level": 100,
-    "health": {
-      "max": 500,
-      "current": 362,
-      "regen": 15
+    "experience": {
+      "toNextlvl": 250,
+      "current": 130
     },
-    "mana": {
-      "max": 265,
-      "current": 47,
-      "regen": 2
+    "statistics": {
+      "health": {
+        "max": 150,
+        "current": 35,
+        "progress_index": 2
+      },
+      "mana": {
+        "max": 30,
+        "current": 23,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
     }
   },
   {
@@ -60,15 +198,61 @@
     "race": "HUM",
     "role": "MAGE",
     "level": 150,
-    "health": {
-      "max": 800,
-      "current": 400,
-      "regen": 20
+    "experience": {
+      "toNextlvl": 1000,
+      "current": 500
     },
-    "mana": {
-      "max": 200,
-      "current": 180,
-      "regen": 2
+    "statistics": {
+      "health": {
+        "max": 150,
+        "current": 35,
+        "progress_index": 2
+      },
+      "mana": {
+        "max": 30,
+        "current": 23,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
     }
   }
 ]
