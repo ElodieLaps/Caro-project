@@ -1,10 +1,12 @@
 import Layout from '../components/templates/Layout';
 import { InferGetStaticPropsType } from 'next';
 import raceApi from '../lib/api/race';
+import Race from '../lib/models/Race';
+import RacesContent, { RacesProps } from '../components/templates/Race';
 
 type pageProps = {
-   pageTitle: string,
-   content: any
+   pageTitle: string;
+   content: RacesProps;
 }
 
 export const getStaticProps = async () => {
@@ -24,15 +26,17 @@ export const getStaticProps = async () => {
    }
 }
 
-const Race = ({ pageTitle, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Races = ({ pageTitle, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
    return (
       <div>
          <Layout pageTitle={pageTitle}>
-            <h1>{content.title}</h1>
-            {console.log('races', content.races)}
+            <RacesContent
+               title={content.title}
+               races={content.races}
+            />
          </Layout>
       </div>
    )
 }
 
-export default Race;
+export default Races;

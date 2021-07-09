@@ -14,6 +14,22 @@ export default class Race {
     this.statistics = statistics;
     this.availableRoles = availableRoles;
   }
+  getName = (): string => {
+    switch (this.name) {
+      case "HUM":
+        return "humaine";
+      case "ELF":
+        return "elfique";
+      case "DWA":
+        return "naine";
+      default:
+        return this.name;
+    }
+  };
+
+  getName2() {
+    return "coucou";
+  }
 }
 
 export const getRaces = (races: Array<any>): Array<Race> => {
@@ -100,6 +116,5 @@ export const getRaces = (races: Array<any>): Array<Race> => {
     );
     racesList.push(newRace);
   });
-
   return racesList;
 };

@@ -1,167 +1,164 @@
 [
   {
-    "HUM": {
-      "statistics": {
-        "health": {
-          "value": 150,
-          "progress_index": 2
-        },
-        "mana": {
-          "value": 30,
-          "progress_index": 2
-        },
-        "health_regen": {
-          "value": 5,
-          "progress_index": 10
-        },
-        "mana_regen": {
-          "value": 2,
-          "progress_index": 2
-        },
-        "attack_damages": {
-          "value": 15,
-          "progress_index": 5
-        },
-        "dark_power": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "light_power": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "armor": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "protection": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "blessing": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "swiftness": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "dodge": {
-          "value": 5,
-          "progress_index": 2
-        }
+    "name": "HUM",
+    "statistics": {
+      "health": {
+        "value": 150,
+        "progress_index": 2
       },
-      "availableRoles": ["WARR", "MAGE", "PRST"]
-    }
+      "mana": {
+        "value": 30,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
+    },
+    "availableRoles": ["WARR", "MAGE", "PRST"]
   },
   {
-    "ELF": {
-      "statistics": {
-        "health": {
-          "value": 150,
-          "progress_index": 2
-        },
-        "mana": {
-          "value": 30,
-          "progress_index": 2
-        },
-        "health_regen": {
-          "value": 5,
-          "progress_index": 10
-        },
-        "mana_regen": {
-          "value": 2,
-          "progress_index": 2
-        },
-        "attack_damages": {
-          "value": 15,
-          "progress_index": 5
-        },
-        "dark_power": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "light_power": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "armor": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "protection": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "blessing": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "swiftness": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "dodge": {
-          "value": 5,
-          "progress_index": 2
-        }
+    "name": "ELF",
+    "statistics": {
+      "health": {
+        "value": 150,
+        "progress_index": 2
       },
-      "availableRoles": ["WARR", "MAGE", "PRST"]
-    }
+      "mana": {
+        "value": 30,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
+    },
+    "availableRoles": ["WARR", "MAGE", "PRST"]
   },
   {
-    "DWA": {
-      "statistics": {
-        "health": {
-          "value": 150,
-          "progress_index": 2
-        },
-        "mana": {
-          "value": 30,
-          "progress_index": 2
-        },
-        "health_regen": {
-          "value": 5,
-          "progress_index": 10
-        },
-        "mana_regen": {
-          "value": 2,
-          "progress_index": 2
-        },
-        "attack_damages": {
-          "value": 15,
-          "progress_index": 5
-        },
-        "dark_power": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "light_power": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "armor": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "protection": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "blessing": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "swiftness": {
-          "value": 5,
-          "progress_index": 2
-        },
-        "dodge": {
-          "value": 5,
-          "progress_index": 2
-        }
+    "name": "DWA",
+    "statistics": {
+      "health": {
+        "value": 150,
+        "progress_index": 2
       },
-      "availableRoles": ["WARR", "MAGE", "PRST"]
-    }
+      "mana": {
+        "value": 30,
+        "progress_index": 2
+      },
+      "health_regen": {
+        "value": 5,
+        "progress_index": 10
+      },
+      "mana_regen": {
+        "value": 2,
+        "progress_index": 2
+      },
+      "attack_damages": {
+        "value": 15,
+        "progress_index": 5
+      },
+      "dark_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "light_power": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "armor": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "protection": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "blessing": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "swiftness": {
+        "value": 5,
+        "progress_index": 2
+      },
+      "dodge": {
+        "value": 5,
+        "progress_index": 2
+      }
+    },
+    "availableRoles": ["WARR", "MAGE", "PRST"]
   }
 ]

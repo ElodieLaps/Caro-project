@@ -9,6 +9,7 @@ type CharacterCardType = {
 const CharacterCard = ({ character }: CharacterCardType) => {
    return (
       <div className="character">
+         {console.log(character)}
          <p className="character__name">
             {character.name}
             <span className="character__gender">{character.getGender()}</span>

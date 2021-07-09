@@ -31,18 +31,18 @@ export default class Character {
     this.statistics = statistics;
   }
 
-  getGender = () => {
+  getGender = (): string => {
     switch (this.gender) {
       case "F":
         return "♀";
       case "M":
         return "♂";
       default:
-        "Ø";
+        return "Ø";
     }
   };
 
-  getRace = () => {
+  getRace = (): string => {
     switch (this.race) {
       case "HUM":
         return this.gender === "F" ? "humaine" : "humain";
@@ -51,11 +51,11 @@ export default class Character {
       case "DWA":
         return this.gender === "F" ? "naine" : "nain";
       default:
-        "Ø";
+        return this.race;
     }
   };
 
-  getRole = () => {
+  getRole = (): string => {
     switch (this.role) {
       case "MAGE":
         return this.gender === "F" ? "magicienne" : "magicien";
@@ -64,7 +64,7 @@ export default class Character {
       case "WARR":
         return this.gender === "F" ? "guerrière" : "guerrier";
       default:
-        "Ø";
+        return this.role;
     }
   };
 
