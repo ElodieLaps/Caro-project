@@ -30,10 +30,10 @@ const Characters = ({ pageTitle, content }: InferGetStaticPropsType<typeof getSt
    return (
       <div>
          <Layout pageTitle={pageTitle}>
-            <CharactersContent
+            {<CharactersContent
                title={content.title}
                characters={content.characters}
-            />
+            />}
          </Layout>
       </div>
    )

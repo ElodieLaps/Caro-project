@@ -8,7 +8,7 @@ const StatItem = ({ statistic }: StatItemType) => {
    return (
       <p className="character__item">
          <span>{statistic.label}: </span>
-         {statistic.max}
+         {statistic.value}
       </p>
    )
 }

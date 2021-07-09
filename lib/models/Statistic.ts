@@ -1,19 +1,19 @@
 class Statistic {
   type: string;
   label: string;
-  max;
+  value;
   current;
   progress_index;
   constructor(
     type: string,
     label: string,
-    max: number,
+    value: number,
     progress_index: number,
     current?: number
   ) {
     this.type = type;
     this.label = label;
-    this.max = max;
+    this.value = value;
     this.current = current;
     this.progress_index = progress_index;
   }

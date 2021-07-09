@@ -1,4 +1,5 @@
 import Character from "../../../lib/models/Character";
+import Statistic from "../../../lib/models/Statistic";
 import Statbar from "../../atoms/Statbar";
 import StatItem from "../../atoms/StatItem";
 
@@ -9,7 +10,6 @@ type CharacterCardType = {
 const CharacterCard = ({ character }: CharacterCardType) => {
    return (
       <div className="character">
-         {console.log(character)}
          <p className="character__name">
             {character.name}
             <span className="character__gender">{character.getGender()}</span>
@@ -26,22 +26,15 @@ const CharacterCard = ({ character }: CharacterCardType) => {
             <span>classe: </span>
             {character.getRole()}
          </p>
-         <Statbar statistic={character.statistics.health} />
-         <Statbar statistic={character.statistics.mana} />
-         <Statbar statistic={character.experience} />
-         <div>
-            <StatItem statistic={character.statistics.health_regen} />
-            <StatItem statistic={character.statistics.mana_regen} />
-            <StatItem statistic={character.statistics.attack_damages} />
-            <StatItem statistic={character.statistics.dark_power} />
-            <StatItem statistic={character.statistics.light_power} />
-            <StatItem statistic={character.statistics.armor} />
-            <StatItem statistic={character.statistics.protection} />
-            <StatItem statistic={character.statistics.blessing} />
-            <StatItem statistic={character.statistics.swiftness} />
-            <StatItem statistic={character.statistics.dodge} />
-         </div>
 
+
+         {character.statistics.map((stat: Statistic) => {
+            if (stat.type === "health" ||
+               stat.type === "mana" ||
+               stat.type === "experience") {
+               return <Statbar key={stat.type} statistic={stat} />
+            } return <StatItem key={stat.type} statistic={stat} />
+         })}
       </div >
    )
 }

@@ -8,7 +8,6 @@ export type CharactersProps = {
 
 const CharactersContent = ({ title, characters }: CharactersProps) => {
    const charactersList = getCharacters(characters);
-
    return (
       <div className="home">
          <h1 className="home__title">{title}</h1>

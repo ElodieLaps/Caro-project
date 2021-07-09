@@ -6,253 +6,88 @@
     "race": "HUM",
     "role": "MAGE",
     "level": 1,
-    "experience": {
-      "toNextlvl": 100,
-      "current": 12
-    },
-    "statistics": {
-      "health": {
-        "max": 150,
-        "current": 35,
+    "statistics": [
+      {
+        "type": "experience",
+        "label": "expérience",
+        "value": 100,
+        "current": 15,
+        "progress_index": 0
+      },
+      {
+        "type": "health",
+        "label": "points de vie",
+        "value": 150,
+        "current": 100,
         "progress_index": 2
       },
-      "mana": {
-        "max": 30,
-        "current": 23,
+      {
+        "type": "mana",
+        "label": "points de mana",
+        "value": 30,
+        "current": 20,
         "progress_index": 2
       },
-      "health_regen": {
+      {
+        "type": "health_regen",
+        "label": "régénération",
         "value": 5,
-        "progress_index": 10
+        "progress_index": 1
       },
-      "mana_regen": {
+      {
+        "type": "mana_regen",
+        "label": "récupération",
         "value": 2,
-        "progress_index": 2
+        "progress_index": 1
       },
-      "attack_damages": {
+      {
+        "type": "attack_damages",
+        "label": "dégâts physiques",
         "value": 15,
         "progress_index": 5
       },
-      "dark_power": {
+      {
+        "type": "dark_power",
+        "label": "magie noire",
         "value": 5,
         "progress_index": 2
       },
-      "light_power": {
+      {
+        "type": "light_power",
+        "label": "magie blanche",
         "value": 5,
         "progress_index": 2
       },
-      "armor": {
+      {
+        "type": "armor",
+        "label": "armure",
         "value": 5,
         "progress_index": 2
       },
-      "protection": {
+      {
+        "type": "protection",
+        "label": "protection",
         "value": 5,
         "progress_index": 2
       },
-      "blessing": {
+      {
+        "type": "blessing",
+        "label": "bénédiction",
         "value": 5,
         "progress_index": 2
       },
-      "swiftness": {
+      {
+        "type": "swiftness",
+        "label": "vitesse",
         "value": 5,
         "progress_index": 2
       },
-      "dodge": {
-        "value": 5,
-        "progress_index": 2
-      }
-    }
-  },
-  {
-    "id": 2,
-    "name": "élodie",
-    "gender": "F",
-    "race": "ELF",
-    "role": "PRST",
-    "level": 5,
-    "experience": {
-      "toNextlvl": 180,
-      "current": 170
-    },
-    "statistics": {
-      "health": {
-        "max": 150,
-        "current": 35,
-        "progress_index": 2
-      },
-      "mana": {
-        "max": 30,
-        "current": 23,
-        "progress_index": 2
-      },
-      "health_regen": {
-        "value": 5,
-        "progress_index": 10
-      },
-      "mana_regen": {
-        "value": 2,
-        "progress_index": 2
-      },
-      "attack_damages": {
-        "value": 15,
-        "progress_index": 5
-      },
-      "dark_power": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "light_power": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "armor": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "protection": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "blessing": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "swiftness": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "dodge": {
+      {
+        "type": "dodge",
+        "label": "esquive",
         "value": 5,
         "progress_index": 2
       }
-    }
-  },
-  {
-    "id": 3,
-    "name": "bryann",
-    "gender": "M",
-    "race": "DWA",
-    "role": "WARR",
-    "level": 100,
-    "experience": {
-      "toNextlvl": 250,
-      "current": 130
-    },
-    "statistics": {
-      "health": {
-        "max": 150,
-        "current": 35,
-        "progress_index": 2
-      },
-      "mana": {
-        "max": 30,
-        "current": 23,
-        "progress_index": 2
-      },
-      "health_regen": {
-        "value": 5,
-        "progress_index": 10
-      },
-      "mana_regen": {
-        "value": 2,
-        "progress_index": 2
-      },
-      "attack_damages": {
-        "value": 15,
-        "progress_index": 5
-      },
-      "dark_power": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "light_power": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "armor": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "protection": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "blessing": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "swiftness": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "dodge": {
-        "value": 5,
-        "progress_index": 2
-      }
-    }
-  },
-  {
-    "id": 4,
-    "name": "jamal",
-    "gender": "M",
-    "race": "HUM",
-    "role": "MAGE",
-    "level": 150,
-    "experience": {
-      "toNextlvl": 1000,
-      "current": 500
-    },
-    "statistics": {
-      "health": {
-        "max": 150,
-        "current": 35,
-        "progress_index": 2
-      },
-      "mana": {
-        "max": 30,
-        "current": 23,
-        "progress_index": 2
-      },
-      "health_regen": {
-        "value": 5,
-        "progress_index": 10
-      },
-      "mana_regen": {
-        "value": 2,
-        "progress_index": 2
-      },
-      "attack_damages": {
-        "value": 15,
-        "progress_index": 5
-      },
-      "dark_power": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "light_power": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "armor": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "protection": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "blessing": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "swiftness": {
-        "value": 5,
-        "progress_index": 2
-      },
-      "dodge": {
-        "value": 5,
-        "progress_index": 2
-      }
-    }
+    ]
   }
 ]
