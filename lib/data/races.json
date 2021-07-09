@@ -57,11 +57,11 @@
     "name": "ELF",
     "statistics": {
       "health": {
-        "value": 150,
+        "value": 100,
         "progress_index": 2
       },
       "mana": {
-        "value": 30,
+        "value": 50,
         "progress_index": 2
       },
       "health_regen": {
@@ -77,15 +77,15 @@
         "progress_index": 5
       },
       "dark_power": {
-        "value": 5,
-        "progress_index": 2
+        "value": 10,
+        "progress_index": 5
       },
       "light_power": {
-        "value": 5,
-        "progress_index": 2
+        "value": 10,
+        "progress_index": 5
       },
       "armor": {
-        "value": 5,
+        "value": 3,
         "progress_index": 2
       },
       "protection": {
@@ -105,14 +105,14 @@
         "progress_index": 2
       }
     },
-    "availableRoles": ["WARR", "MAGE", "PRST"]
+    "availableRoles": ["MAGE", "PRST"]
   },
   {
     "name": "DWA",
     "statistics": {
       "health": {
-        "value": 150,
-        "progress_index": 2
+        "value": 180,
+        "progress_index": 5
       },
       "mana": {
         "value": 30,
@@ -159,6 +159,6 @@
         "progress_index": 2
       }
     },
-    "availableRoles": ["WARR", "MAGE", "PRST"]
+    "availableRoles": ["WARR", "PRST"]
   }
 ]

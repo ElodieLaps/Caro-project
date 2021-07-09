@@ -1,7 +1,6 @@
 import Layout from '../components/templates/Layout';
 import { InferGetStaticPropsType } from 'next';
 import raceApi from '../lib/api/race';
-import Race from '../lib/models/Race';
 import RacesContent, { RacesProps } from '../components/templates/Race';
 
 type pageProps = {

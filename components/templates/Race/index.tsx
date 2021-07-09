@@ -1,4 +1,5 @@
 import Race, { getRaces } from "../../../lib/models/Race";
+import RacesList from "../../organisms/RacesList";
 
 export type RacesProps = {
    title: string;
@@ -11,15 +12,7 @@ const RacesContent = ({ title, races }: RacesProps) => {
    return (
       <div className="race">
          <h1>{title}</h1>
-         {racesList.map((race: Race) => {
-            return (
-               <div key={race.name}>
-                  <h1>{race.name}</h1>
-                  {console.log(race)}
-                  {race.getName()}
-               </div>
-            )
-         })}
+         <RacesList racesList={racesList} />
       </div>
    )
 
