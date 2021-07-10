@@ -6,7 +6,7 @@
         "type": "experience",
         "label": "expérience",
         "value": 100,
-        "progress_index": 0
+        "progress_index": 5
       },
       {
         "type": "health",

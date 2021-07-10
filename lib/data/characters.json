@@ -12,7 +12,7 @@
         "label": "expérience",
         "value": 100,
         "current": 10,
-        "progress_index": 0
+        "progress_index": 5
       },
       {
         "type": "health",

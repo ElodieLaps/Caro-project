@@ -94,7 +94,8 @@ export default class Character {
 
     this.statistics.forEach((statistic: Statistic) => {
       const updatedValue: number =
-        statistic.value + statistic.progress_index * this.level;
+        statistic.value +
+        ((statistic.progress_index * this.level) / statistic.value) * 100;
 
       const updatedStatistic: Statistic = { ...statistic, value: updatedValue };
 
@@ -107,7 +108,7 @@ export default class Character {
 
 export const getCharacters = (characters: Array<any>): Array<Character> => {
   const charactersList: Array<Character> = [];
-
+  const defaultExperience = new Statistic("experience", "expérience", 100, 5);
   characters.forEach((character: any) => {
     const newCharacter = new Character(
       character.id,
@@ -118,7 +119,9 @@ export const getCharacters = (characters: Array<any>): Array<Character> => {
       character.level,
       character.statistics
     );
+    newCharacter.statistics.push(defaultExperience);
     newCharacter.updateStatisticsWithLevel();
+
     charactersList.push(newCharacter);
   });
   return charactersList;
