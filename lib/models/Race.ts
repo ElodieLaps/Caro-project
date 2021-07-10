@@ -1,5 +1,4 @@
 import Statistic from "./Statistic";
-import Statistics from "./Statistics";
 
 export default class Race {
   name;
@@ -7,7 +6,7 @@ export default class Race {
   availableRoles;
   constructor(
     name: string,
-    statistics: Statistics,
+    statistics: Array<Statistic>,
     availableRoles: Array<string>
   ) {
     this.name = name;
@@ -26,95 +25,15 @@ export default class Race {
         return this.name;
     }
   };
-
-  getName2() {
-    return "coucou";
-  }
 }
 
 export const getRaces = (races: Array<any>): Array<Race> => {
   const racesList: Array<Race> = [];
 
   races.forEach((race: any) => {
-    const newRace = new Race(
-      race.name,
-      new Statistics(
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        ),
-        new Statistic(
-          "health",
-          "points de vie",
-          race.statistics.value,
-          race.statistics.value
-        )
-      ),
-      race.availableRoles
-    );
+    const newRace = new Race(race.name, race.statistics, race.availableRoles);
     racesList.push(newRace);
   });
+
   return racesList;
 };

@@ -63,7 +63,46 @@ export default class Character {
     }
   };
 
-  getMaxHealth = () => {};
+  levelUp = (): Array<Statistic> => {
+    const updatedStatistics: Array<Statistic> = this.statistics;
+    const [experience] = this.statistics.filter(
+      (statistic: Statistic) => statistic.type === "experience"
+    );
+    if (experience.current && experience.current >= experience.value) {
+      const updatedExperience: Statistic = experience;
+      this.level + 1;
+      updatedExperience.setCurrent(experience.current - experience.value);
+      updatedExperience.setValue(experience.value + experience.progress_index);
+
+      /* const updatedExperience = {
+        ...experience,
+        current: experience.current - experience.value,
+        value: ,
+      }; */
+
+      updatedStatistics.forEach((statistic: Statistic) => {
+        if (statistic.type === "experience") {
+          statistic = updatedExperience;
+        }
+      });
+    }
+    return this.statistics;
+  };
+
+  updateStatisticsWithLevel = (): Array<Statistic> => {
+    const updatedStatistics: Array<Statistic> = [];
+
+    this.statistics.forEach((statistic: Statistic) => {
+      const updatedValue: number =
+        statistic.value + statistic.progress_index * this.level;
+
+      const updatedStatistic: Statistic = { ...statistic, value: updatedValue };
+
+      updatedStatistics.push(updatedStatistic);
+    });
+    console.log(updatedStatistics);
+    return (this.statistics = updatedStatistics);
+  };
 }
 
 export const getCharacters = (characters: Array<any>): Array<Character> => {
@@ -79,6 +118,7 @@ export const getCharacters = (characters: Array<any>): Array<Character> => {
       character.level,
       character.statistics
     );
+    newCharacter.updateStatisticsWithLevel();
     charactersList.push(newCharacter);
   });
   return charactersList;

@@ -27,7 +27,6 @@ const CharacterCard = ({ character }: CharacterCardType) => {
             {character.getRole()}
          </p>
 
-
          {character.statistics.map((stat: Statistic) => {
             if (stat.type === "health" ||
                stat.type === "mana" ||

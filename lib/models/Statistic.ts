@@ -17,6 +17,18 @@ class Statistic {
     this.current = current;
     this.progress_index = progress_index;
   }
+
+  setLabel = (label: string): string => {
+    return (this.label = label);
+  };
+
+  setValue = (value: number): number => {
+    return (this.value = value);
+  };
+
+  setCurrent = (currentValue: number): number => {
+    return (this.current = currentValue);
+  };
 }
 
 export default Statistic;
