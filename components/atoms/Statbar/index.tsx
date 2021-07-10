@@ -5,9 +5,14 @@ type StatbarType = {
 }
 
 const Statbar = ({ statistic }: StatbarType) => {
+   const width = (statistic.current && (statistic.current / statistic.value) * 100);
+   const color = width && width <= 10 ? 'red' : '';
+
    const style = {
-      width: `${(statistic.current && (statistic.current / statistic.value) * 100)}%`,
+      width: `${width}%`,
+      backgroundColor: statistic.type === 'health' ? color : ''
    }
+
    return (
       <div className="statistic">
          <p className="statistic__label">{statistic.label}: </p>

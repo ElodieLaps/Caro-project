@@ -11,14 +11,14 @@
         "type": "experience",
         "label": "expérience",
         "value": 100,
-        "current": 15,
+        "current": 10,
         "progress_index": 0
       },
       {
         "type": "health",
         "label": "points de vie",
         "value": 150,
-        "current": 100,
+        "current": 10,
         "progress_index": 2
       },
       {
