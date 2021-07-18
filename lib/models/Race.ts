@@ -1,3 +1,4 @@
+import raceApi from "../api/race";
 import Statistic from "./Statistic";
 
 export default class Race {
@@ -36,4 +37,18 @@ export const getRaces = (races: Array<any>): Array<Race> => {
   });
 
   return racesList;
+};
+
+export const getRace = (race: string) => {
+  const allRaces = raceApi.getAllRaces();
+  switch (race) {
+    case "HUM":
+      return allRaces.find((race) => race.name === "HUM");
+    case "ELF":
+      return allRaces.find((race) => race.name === "ELF");
+    case "DWA":
+      return allRaces.find((race) => race.name === "DWA");
+    default:
+      "any";
+  }
 };

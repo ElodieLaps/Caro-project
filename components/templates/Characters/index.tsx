@@ -1,4 +1,5 @@
-import Character, { getCharacters } from "../../../lib/models/Character";
+import Character from "../../../lib/models/Character";
+import { createCharacters } from "../../../lib/factories/character";
 import CharactersList from "../../organisms/CharactersList";
 
 export type CharactersProps = {
@@ -7,7 +8,7 @@ export type CharactersProps = {
 }
 
 const CharactersContent = ({ title, characters }: CharactersProps) => {
-   const charactersList = getCharacters(characters);
+   const charactersList = createCharacters(characters);
    return (
       <div className="home">
          <h1 className="home__title">{title}</h1>

@@ -1,3 +1,4 @@
+import Race from "./Race";
 import Statistic from "./Statistic";
 
 export default class Character {
@@ -12,10 +13,10 @@ export default class Character {
     id: number,
     name: string,
     gender: string,
-    race: string,
+    race: Race | null,
     role: string,
     level: number,
-    statistics: Array<Statistic>
+    statistics: Array<Statistic> | null
   ) {
     this.id = id;
     this.name = name;
@@ -38,7 +39,7 @@ export default class Character {
   };
 
   getRace = (): string => {
-    switch (this.race) {
+    switch (this.race.name) {
       case "HUM":
         return this.gender === "F" ? "humaine" : "humain";
       case "ELF":
@@ -46,7 +47,7 @@ export default class Character {
       case "DWA":
         return this.gender === "F" ? "naine" : "nain";
       default:
-        return this.race;
+        return this.race.name;
     }
   };
 
@@ -91,38 +92,21 @@ export default class Character {
 
   updateStatisticsWithLevel = (): Array<Statistic> => {
     const updatedStatistics: Array<Statistic> = [];
-
-    this.statistics.forEach((statistic: Statistic) => {
-      const updatedValue: number =
-        statistic.value +
-        ((statistic.progress_index * this.level) / statistic.value) * 100;
-
-      const updatedStatistic: Statistic = { ...statistic, value: updatedValue };
-
-      updatedStatistics.push(updatedStatistic);
-    });
-    console.log(updatedStatistics);
-    return (this.statistics = updatedStatistics);
+    if (this.level > 1) {
+      for (let i = 0; i < this.level; i++) {
+        this.statistics.forEach((statistic: Statistic) => {
+          const updatedValue: number = Math.round(
+            statistic.value + statistic.progress_index * this.level
+          );
+          const updatedStatistic: Statistic = {
+            ...statistic,
+            value: updatedValue,
+          };
+          updatedStatistics.push(updatedStatistic);
+        });
+        return (this.statistics = updatedStatistics);
+      }
+    }
+    return this.statistics;
   };
 }
-
-export const getCharacters = (characters: Array<any>): Array<Character> => {
-  const charactersList: Array<Character> = [];
-  const defaultExperience = new Statistic("experience", "expérience", 100, 5);
-  characters.forEach((character: any) => {
-    const newCharacter = new Character(
-      character.id,
-      character.name,
-      character.gender,
-      character.race,
-      character.role,
-      character.level,
-      character.statistics
-    );
-    newCharacter.statistics.push(defaultExperience);
-    newCharacter.updateStatisticsWithLevel();
-
-    charactersList.push(newCharacter);
-  });
-  return charactersList;
-};

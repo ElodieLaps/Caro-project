@@ -3,12 +3,6 @@
     "name": "HUM",
     "statistics": [
       {
-        "type": "experience",
-        "label": "expérience",
-        "value": 100,
-        "progress_index": 5
-      },
-      {
         "type": "health",
         "label": "points de vie",
         "value": 150,

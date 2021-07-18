@@ -11,7 +11,7 @@ type pageProps = {
 
 export const getStaticProps = async () => {
 
-   const pageTitle = "les personnages"
+   const pageTitle = "Les personnages"
    const title = "Les personnages"
    const characters = await characterApi.getAllCharacters();
 
