@@ -5,19 +5,42 @@ import Race from "../models/Race";
 
 export const createCharacters = (characters: Array<any>): Array<Character> => {
   const charactersList: Array<Character> = [];
-  const defaultExperience = {
-    type: "experience",
-    label: "expérience",
-    value: 100,
-    current: 0,
-    progress_index: 5,
-  } as Statistic;
-
   characters.forEach((character: any) => {
+    let experience = {
+      type: "experience",
+      label: "expérience",
+      value: 100,
+      current: 0,
+      progress_index: 5,
+    } as Statistic;
+
     const characterRace = getRace(character.race) as Race;
     const characterStatistics: Array<Statistic> = characterRace
       ? characterRace.statistics
       : [];
+
+    const healthDataStat =
+      character.statistics &&
+      character.statistics.find((stat: Statistic) => stat.type === "health");
+    const manaDataStat =
+      character.statistics &&
+      character.statistics.find((stat: Statistic) => stat.type === "mana");
+    const experienceDataStat =
+      character.statistics &&
+      character.statistics.find(
+        (stat: Statistic) => stat.type === "experience"
+      );
+
+    const healthRaceStat =
+      characterStatistics &&
+      characterStatistics.find((stat: Statistic) => stat.type === "health");
+    const manaRaceStat =
+      characterStatistics &&
+      characterStatistics.find((stat: Statistic) => stat.type === "mana");
+    if (experienceDataStat) {
+      experience = { ...experience, current: experienceDataStat.current };
+    }
+
     const newCharacter = new Character(
       character.id,
       character.name,
@@ -27,12 +50,34 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
       character.level,
       characterStatistics
     );
-    if (
-      characterStatistics &&
-      !characterStatistics.find((stat) => stat.type === "experience")
-    ) {
-      characterStatistics.splice(0, 0, defaultExperience);
+
+    const newExperienceStat = newCharacter.statistics.find(
+      (stat) => stat.type === "experience"
+    );
+    if (!newExperienceStat) {
+      newCharacter.statistics.splice(0, 0, experience);
     }
+
+    let newHealthStat = newCharacter.statistics.find(
+      (stat) => stat.type === "health"
+    );
+    if (newHealthStat) {
+      const current = healthDataStat
+        ? healthDataStat.current
+        : healthRaceStat?.value;
+      newHealthStat = { ...newHealthStat, current: current } as Statistic;
+      newCharacter.statistics.splice(1, 1, newHealthStat);
+    }
+
+    let newManaStat = newCharacter.statistics.find(
+      (stat) => stat.type === "mana"
+    );
+    if (newManaStat) {
+      const current = manaDataStat ? manaDataStat.current : manaRaceStat?.value;
+      newManaStat = { ...newManaStat, current: current } as Statistic;
+      newCharacter.statistics.splice(2, 2, newManaStat);
+    }
+
     newCharacter.updateStatisticsWithLevel();
     console.log("newCharacter", newCharacter);
     charactersList.push(newCharacter);

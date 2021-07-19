@@ -1,4 +1,3 @@
-import raceApi from "../api/race";
 import Statistic from "./Statistic";
 
 export default class Race {
