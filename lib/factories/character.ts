@@ -1,7 +1,7 @@
-import raceApi from "../api/race";
 import Character from "../models/Character";
-import Race, { getRace } from "../models/Race";
+import { getRace } from "../api/race";
 import Statistic from "../models/Statistic";
+import Race from "../models/Race";
 
 export const createCharacters = (characters: Array<any>): Array<Character> => {
   const charactersList: Array<Character> = [];
@@ -15,9 +15,9 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
 
   characters.forEach((character: any) => {
     const characterRace = getRace(character.race) as Race;
-    const characterStatistics = characterRace ? characterRace.statistics : [];
-    console.log("race", characterRace);
-    console.log("le sans", characterStatistics);
+    const characterStatistics: Array<Statistic> = characterRace
+      ? characterRace.statistics
+      : [];
     const newCharacter = new Character(
       character.id,
       character.name,
@@ -25,13 +25,13 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
       characterRace,
       character.role,
       character.level,
-      character.statistics
+      characterStatistics
     );
     if (
-      newCharacter.statistics &&
-      !newCharacter.statistics.find((stat) => stat.type === "experience")
+      characterStatistics &&
+      !characterStatistics.find((stat) => stat.type === "experience")
     ) {
-      newCharacter.statistics.splice(0, 0, defaultExperience);
+      characterStatistics.splice(0, 0, defaultExperience);
     }
     newCharacter.updateStatisticsWithLevel();
     console.log("newCharacter", newCharacter);

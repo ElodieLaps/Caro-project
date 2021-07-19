@@ -79,56 +79,80 @@
   },
   {
     "name": "ELF",
-    "statistics": {
-      "health": {
-        "value": 100,
+    "statistics": [
+      {
+        "type": "health",
+        "label": "points de vie",
+        "value": 150,
         "progress_index": 2
       },
-      "mana": {
-        "value": 50,
+      {
+        "type": "mana",
+        "label": "points de mana",
+        "value": 30,
         "progress_index": 2
       },
-      "health_regen": {
+      {
+        "type": "health_regen",
+        "label": "régénération",
         "value": 5,
-        "progress_index": 10
+        "progress_index": 1
       },
-      "mana_regen": {
+      {
+        "type": "mana_regen",
+        "label": "récupération",
         "value": 2,
-        "progress_index": 2
+        "progress_index": 1
       },
-      "attack_damages": {
+      {
+        "type": "attack_damages",
+        "label": "dégâts physiques",
         "value": 15,
         "progress_index": 5
       },
-      "dark_power": {
-        "value": 10,
-        "progress_index": 5
-      },
-      "light_power": {
-        "value": 10,
-        "progress_index": 5
-      },
-      "armor": {
-        "value": 3,
-        "progress_index": 2
-      },
-      "protection": {
+      {
+        "type": "dark_power",
+        "label": "magie noire",
         "value": 5,
         "progress_index": 2
       },
-      "blessing": {
+      {
+        "type": "light_power",
+        "label": "magie blanche",
         "value": 5,
         "progress_index": 2
       },
-      "swiftness": {
+      {
+        "type": "armor",
+        "label": "armure",
         "value": 5,
         "progress_index": 2
       },
-      "dodge": {
+      {
+        "type": "protection",
+        "label": "protection",
+        "value": 5,
+        "progress_index": 2
+      },
+      {
+        "type": "blessing",
+        "label": "bénédiction",
+        "value": 5,
+        "progress_index": 2
+      },
+      {
+        "type": "swiftness",
+        "label": "vitesse",
+        "value": 5,
+        "progress_index": 2
+      },
+      {
+        "type": "dodge",
+        "label": "esquive",
         "value": 5,
         "progress_index": 2
       }
-    },
+    ],
     "availableRoles": ["MAGE", "PRST"]
   },
   {
