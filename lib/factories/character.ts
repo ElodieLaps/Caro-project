@@ -1,6 +1,6 @@
 import raceApi from "../api/race";
 import Character from "../models/Character";
-import { getRace } from "../models/Race";
+import Race, { getRace } from "../models/Race";
 import Statistic from "../models/Statistic";
 
 export const createCharacters = (characters: Array<any>): Array<Character> => {
@@ -14,7 +14,7 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
   } as Statistic;
 
   characters.forEach((character: any) => {
-    const characterRace = getRace(character.race);
+    const characterRace = getRace(character.race) as Race;
     const characterStatistics = characterRace ? characterRace.statistics : [];
     console.log("race", characterRace);
     console.log("le sans", characterStatistics);
@@ -34,6 +34,7 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
       newCharacter.statistics.splice(0, 0, defaultExperience);
     }
     newCharacter.updateStatisticsWithLevel();
+    console.log("newCharacter", newCharacter);
     charactersList.push(newCharacter);
   });
   return charactersList;

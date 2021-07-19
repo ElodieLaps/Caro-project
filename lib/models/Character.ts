@@ -13,10 +13,10 @@ export default class Character {
     id: number,
     name: string,
     gender: string,
-    race: Race | null,
+    race: Race,
     role: string,
     level: number,
-    statistics: Array<Statistic> | null
+    statistics: Array<Statistic>
   ) {
     this.id = id;
     this.name = name;
