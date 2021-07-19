@@ -9,6 +9,7 @@ export default class Character {
   role;
   level;
   statistics;
+  equipments;
   constructor(
     id: number,
     name: string,
@@ -16,7 +17,8 @@ export default class Character {
     race: Race,
     role: string,
     level: number,
-    statistics: Array<Statistic>
+    statistics: Array<Statistic>,
+    equipments?: any
   ) {
     this.id = id;
     this.name = name;
@@ -25,6 +27,7 @@ export default class Character {
     this.role = role;
     this.level = level;
     this.statistics = statistics;
+    this.equipments = equipments;
   }
 
   getGender = (): string => {

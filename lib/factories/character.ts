@@ -5,6 +5,7 @@ import Race from "../models/Race";
 
 export const createCharacters = (characters: Array<any>): Array<Character> => {
   const charactersList: Array<Character> = [];
+
   characters.forEach((character: any) => {
     let experience = {
       type: "experience",
@@ -31,15 +32,16 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
         (stat: Statistic) => stat.type === "experience"
       );
 
+    if (experienceDataStat) {
+      experience = { ...experience, current: experienceDataStat.current };
+    }
+
     const healthRaceStat =
       characterStatistics &&
       characterStatistics.find((stat: Statistic) => stat.type === "health");
     const manaRaceStat =
       characterStatistics &&
       characterStatistics.find((stat: Statistic) => stat.type === "mana");
-    if (experienceDataStat) {
-      experience = { ...experience, current: experienceDataStat.current };
-    }
 
     const newCharacter = new Character(
       character.id,
@@ -54,13 +56,16 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
     const newExperienceStat = newCharacter.statistics.find(
       (stat) => stat.type === "experience"
     );
-    if (!newExperienceStat) {
-      newCharacter.statistics.splice(0, 0, experience);
-    }
-
     let newHealthStat = newCharacter.statistics.find(
       (stat) => stat.type === "health"
     );
+    let newManaStat = newCharacter.statistics.find(
+      (stat) => stat.type === "mana"
+    );
+
+    if (!newExperienceStat) {
+      newCharacter.statistics.splice(0, 0, experience);
+    }
     if (newHealthStat) {
       const current = healthDataStat
         ? healthDataStat.current
@@ -68,10 +73,6 @@ export const createCharacters = (characters: Array<any>): Array<Character> => {
       newHealthStat = { ...newHealthStat, current: current } as Statistic;
       newCharacter.statistics.splice(1, 1, newHealthStat);
     }
-
-    let newManaStat = newCharacter.statistics.find(
-      (stat) => stat.type === "mana"
-    );
     if (newManaStat) {
       const current = manaDataStat ? manaDataStat.current : manaRaceStat?.value;
       newManaStat = { ...newManaStat, current: current } as Statistic;

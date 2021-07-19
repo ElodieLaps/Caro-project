@@ -1,0 +1,7 @@
+[
+  {
+    "name": "MAGE",
+    "availableItemTypes": ["HAT", "TIARA", "DRESS", "SHOES"],
+    "availableAbilities": ["FLASH", "POISON"]
+  }
+]
