@@ -1,5 +1,8 @@
 import Race from "./Race";
 import Statistic from "./Statistic";
+import * as races from "../constants/RACES";
+import * as genders from "../constants/GENDERS";
+import * as roles from "../constants/ROLES";
 
 export default class Character {
   id;
@@ -32,9 +35,9 @@ export default class Character {
 
   getGender = (): string => {
     switch (this.gender) {
-      case "F":
+      case genders.FEMALE:
         return "♀";
-      case "M":
+      case genders.MALE:
         return "♂";
       default:
         return "Ø";
@@ -43,12 +46,12 @@ export default class Character {
 
   getRace = (): string => {
     switch (this.race.name) {
-      case "HUM":
-        return this.gender === "F" ? "humaine" : "humain";
-      case "ELF":
+      case races.HUMAN:
+        return this.gender === genders.FEMALE ? "humaine" : "humain";
+      case races.ELF:
         return "elfe";
-      case "DWA":
-        return this.gender === "F" ? "naine" : "nain";
+      case races.DWARF:
+        return this.gender === genders.FEMALE ? "naine" : "nain";
       default:
         return this.race.name;
     }
@@ -56,12 +59,12 @@ export default class Character {
 
   getRole = (): string => {
     switch (this.role) {
-      case "MAGE":
-        return this.gender === "F" ? "magicienne" : "magicien";
-      case "PRST":
-        return this.gender === "F" ? "prêtresse" : "prêtre";
-      case "WARR":
-        return this.gender === "F" ? "guerrière" : "guerrier";
+      case roles.MAGE:
+        return this.gender === genders.FEMALE ? "magicienne" : "magicien";
+      case roles.PRIEST:
+        return this.gender === genders.FEMALE ? "prêtresse" : "prêtre";
+      case roles.WARRIOR:
+        return this.gender === genders.FEMALE ? "guerrière" : "guerrier";
       default:
         return this.role;
     }

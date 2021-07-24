@@ -28,5 +28,22 @@
       "STAFF"
     ],
     "availableAbilities": ["BLESSING", "HEAL"]
+  },
+  {
+    "name": "WARR",
+    "availableItemTypes": [
+      "HAT",
+      "HELMET",
+      "TIARA",
+      "DRESS",
+      "ARMOR",
+      "SHOES",
+      "BOOTS",
+      "SHIELD",
+      "SWORD",
+      "LANCE",
+      "STAFF"
+    ],
+    "availableAbilities": ["BLESSING", "HEAL"]
   }
 ]

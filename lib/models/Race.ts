@@ -1,4 +1,5 @@
 import Statistic from "./Statistic";
+import * as races from "../constants/RACES";
 
 export default class Race {
   name;
@@ -15,11 +16,11 @@ export default class Race {
   }
   getName = (): string => {
     switch (this.name) {
-      case "HUM":
+      case races.HUMAN:
         return "humaine";
-      case "ELF":
+      case races.ELF:
         return "elfique";
-      case "DWA":
+      case races.DWARF:
         return "naine";
       default:
         return this.name;
