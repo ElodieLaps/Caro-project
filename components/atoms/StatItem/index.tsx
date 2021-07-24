@@ -6,7 +6,7 @@ type StatItemType = {
 
 const StatItem = ({ statistic }: StatItemType) => {
    return (
-      <p className="character__item">
+      <p className={`statistic__item item__${statistic.type}`}>
          <span>{statistic.label}: </span>
          {statistic.value}
       </p>

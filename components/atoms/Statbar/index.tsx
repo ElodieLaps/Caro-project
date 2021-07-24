@@ -14,7 +14,7 @@ const Statbar = ({ statistic }: StatbarType) => {
    }
 
    return (
-      <div className="statistic">
+      <div className={`statistic item__${statistic.type}`}>
          <p className="statistic__label">{statistic.label}: </p>
          <p className="statistic__values">{statistic.current} / {statistic.value} pts</p>
          <div className="statistic__container">

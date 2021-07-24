@@ -1,4 +1,5 @@
 import Race from "../../../lib/models/Race";
+import StatItem from "../../atoms/StatItem";
 
 type RaceCardType = {
    race: Race;
@@ -7,9 +8,10 @@ type RaceCardType = {
 const RaceCard = ({ race }: RaceCardType) => {
    return (
       <div className="race">
-         <h1>{race.getName()}</h1>
-
-
+         <p className="race__name">{race.getName()}</p>
+         {race.statistics.map(stat =>
+            <StatItem key={stat.type} statistic={stat} />
+         )}
       </div>
    )
 }

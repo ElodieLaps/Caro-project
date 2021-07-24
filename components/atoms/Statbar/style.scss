@@ -4,7 +4,7 @@ $max-width: 150px;
 
 .statistic {
   &__label {
-    font-weight: 700;
+    font-weight: $font-bold;
   }
   &__values {
     font-size: 12px;

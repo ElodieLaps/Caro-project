@@ -157,56 +157,80 @@
   },
   {
     "name": "DWA",
-    "statistics": {
-      "health": {
-        "value": 180,
-        "progress_index": 5
+    "statistics": [
+      {
+        "type": "health",
+        "label": "points de vie",
+        "value": 150,
+        "progress_index": 2
       },
-      "mana": {
+      {
+        "type": "mana",
+        "label": "points de mana",
         "value": 30,
         "progress_index": 2
       },
-      "health_regen": {
+      {
+        "type": "health_regen",
+        "label": "régénération",
         "value": 5,
-        "progress_index": 10
+        "progress_index": 1
       },
-      "mana_regen": {
+      {
+        "type": "mana_regen",
+        "label": "récupération",
         "value": 2,
-        "progress_index": 2
+        "progress_index": 1
       },
-      "attack_damages": {
+      {
+        "type": "attack_damages",
+        "label": "dégâts physiques",
         "value": 15,
         "progress_index": 5
       },
-      "dark_power": {
+      {
+        "type": "dark_power",
+        "label": "magie noire",
         "value": 5,
         "progress_index": 2
       },
-      "light_power": {
+      {
+        "type": "light_power",
+        "label": "magie blanche",
         "value": 5,
         "progress_index": 2
       },
-      "armor": {
+      {
+        "type": "armor",
+        "label": "armure",
         "value": 5,
         "progress_index": 2
       },
-      "protection": {
+      {
+        "type": "protection",
+        "label": "protection",
         "value": 5,
         "progress_index": 2
       },
-      "blessing": {
+      {
+        "type": "blessing",
+        "label": "bénédiction",
         "value": 5,
         "progress_index": 2
       },
-      "swiftness": {
+      {
+        "type": "swiftness",
+        "label": "vitesse",
         "value": 5,
         "progress_index": 2
       },
-      "dodge": {
+      {
+        "type": "dodge",
+        "label": "esquive",
         "value": 5,
         "progress_index": 2
       }
-    },
+    ],
     "availableRoles": ["WARR", "PRST"]
   }
 ]

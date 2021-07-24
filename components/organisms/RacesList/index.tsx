@@ -1,5 +1,5 @@
 import Race from "../../../lib/models/Race";
-import RaceCard from "../../molecules/Race";
+import RaceCard from "../../molecules/RaceCard";
 
 
 type RacesListType = {
@@ -11,9 +11,7 @@ const RacesList = ({ racesList }: RacesListType) => {
       <div className="races-list">
          {racesList.map((race: Race) => {
             return (
-               <div key={race.name}>
-                  <RaceCard race={race} />
-               </div>
+               <RaceCard key={race.name} race={race} />
             )
          })}
       </div>

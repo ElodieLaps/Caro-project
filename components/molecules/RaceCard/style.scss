@@ -1,0 +1,9 @@
+.race {
+  margin: 20px;
+  &__name {
+    text-transform: capitalize;
+    font-weight: $font-bold;
+    font-size: 20px;
+    padding: 5px;
+  }
+}

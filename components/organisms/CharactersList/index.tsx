@@ -1,5 +1,5 @@
 import Character from "../../../lib/models/Character";
-import CharacterCard from "../../molecules/Character";
+import CharacterCard from "../../molecules/CharacterCard";
 
 type CharactersListType = {
    charactersList: Array<Character>;

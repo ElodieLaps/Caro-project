@@ -1,7 +1,32 @@
 [
   {
     "name": "MAGE",
-    "availableItemTypes": ["HAT", "TIARA", "DRESS", "SHOES"],
+    "availableItemTypes": [
+      "HAT",
+      "TIARA",
+      "DRESS",
+      "SHOES",
+      "STAFF",
+      "MAGIC_STICK",
+      "KNIFE"
+    ],
     "availableAbilities": ["FLASH", "POISON"]
+  },
+  {
+    "name": "PRST",
+    "availableItemTypes": [
+      "HAT",
+      "HELMET",
+      "TIARA",
+      "DRESS",
+      "ARMOR",
+      "SHOES",
+      "BOOTS",
+      "SHIELD",
+      "SWORD",
+      "LANCE",
+      "STAFF"
+    ],
+    "availableAbilities": ["BLESSING", "HEAL"]
   }
 ]

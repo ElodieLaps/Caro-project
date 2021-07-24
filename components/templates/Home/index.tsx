@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Title from '../../atoms/Title';
 
 export type HomeProps = {
    title: string;
@@ -8,7 +9,7 @@ const HomeContent = ({ title }: HomeProps) => {
 
    return (
       <div className="home">
-         <h1>{title}</h1>
+         <Title classname="home__title" text={title} />
          <ul>
             <li>
                <Link href="/">

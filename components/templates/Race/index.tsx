@@ -1,4 +1,5 @@
 import Race, { getRaces } from "../../../lib/models/Race";
+import Title from "../../atoms/Title";
 import RacesList from "../../organisms/RacesList";
 
 export type RacesProps = {
@@ -11,7 +12,7 @@ const RacesContent = ({ title, races }: RacesProps) => {
 
    return (
       <div className="race">
-         <h1>{title}</h1>
+         <Title classname="race__title" text={title} />
          <RacesList racesList={racesList} />
       </div>
    )
