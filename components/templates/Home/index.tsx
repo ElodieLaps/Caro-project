@@ -26,6 +26,11 @@ const HomeContent = ({ title }: HomeProps) => {
                   <a>les personnages</a>
                </Link>
             </li>
+            <li>
+               <Link href="/roles">
+                  <a>les classes</a>
+               </Link>
+            </li>
          </ul>
 
       </div>

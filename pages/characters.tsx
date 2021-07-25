@@ -2,8 +2,8 @@ import Layout from '../components/templates/Layout';
 import { InferGetStaticPropsType } from 'next';
 import { CharactersProps } from '../components/templates/Characters';
 import CharactersContent from '../components/templates/Characters';
-import characterApi from '../lib/api/character';
-import raceApi from '../lib/api/race';
+import characterApi from './api/character';
+import raceApi from './api/race';
 
 type pageProps = {
    pageTitle: string,

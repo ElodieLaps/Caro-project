@@ -1,4 +1,4 @@
-import characters from "../data/characters.json";
+import characters from "../../lib/data/characters.json";
 
 const characterApi = {
   getAllCharacters: () => {

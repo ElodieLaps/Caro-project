@@ -1,5 +1,5 @@
-import races from "../data/races.json";
-import * as racesConst from "../constants/RACES";
+import races from "../../lib/data/races.json";
+import * as racesConst from "../../lib/constants/RACES";
 const raceApi = {
   getAllRaces: () => {
     return races;
