@@ -1,4 +1,5 @@
 import Statistic from "../../../lib/models/Statistic";
+import * as statConst from "../../../lib/constants/STATISTICS";
 
 type StatbarType = {
    statistic: Statistic;
@@ -10,7 +11,7 @@ const Statbar = ({ statistic }: StatbarType) => {
 
    const style = {
       width: `${width}%`,
-      backgroundColor: statistic.type === 'health' ? color : ''
+      backgroundColor: statistic.type === statConst.HEALTH ? color : ''
    }
 
    return (

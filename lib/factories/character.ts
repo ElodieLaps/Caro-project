@@ -1,6 +1,7 @@
 import Character from "../models/Character";
 import Statistic from "../models/Statistic";
 import Race from "../models/Race";
+import * as statConst from "../constants/STATISTICS";
 
 export const createCharacter = (character: any, race: Race) => {
   const raceStatistics = race.statistics as Array<Statistic>;
@@ -11,13 +12,19 @@ export const createCharacter = (character: any, race: Race) => {
 
   const healthDataStat =
     character.statistics &&
-    character.statistics.find((stat: Statistic) => stat.type === "health");
+    character.statistics.find(
+      (stat: Statistic) => stat.type === statConst.HEALTH
+    );
   const manaDataStat =
     character.statistics &&
-    character.statistics.find((stat: Statistic) => stat.type === "mana");
+    character.statistics.find(
+      (stat: Statistic) => stat.type === statConst.MANA
+    );
   const experienceDataStat =
     character.statistics &&
-    character.statistics.find((stat: Statistic) => stat.type === "experience");
+    character.statistics.find(
+      (stat: Statistic) => stat.type === statConst.EXPERIENCE
+    );
 
   const newCharacter = new Character(
     character.id,
@@ -30,10 +37,10 @@ export const createCharacter = (character: any, race: Race) => {
   );
 
   const newExperienceStat = newCharacter.statistics.find(
-    (stat) => stat.type === "experience"
+    (stat) => stat.type === statConst.EXPERIENCE
   );
   let experience = {
-    type: "experience",
+    type: statConst.EXPERIENCE,
     label: "expérience",
     value: 100,
     current: 0,
@@ -44,12 +51,12 @@ export const createCharacter = (character: any, race: Race) => {
   }
 
   let newHealthStat = newCharacter.statistics.find(
-    (stat) => stat.type === "health"
+    (stat) => stat.type === statConst.HEALTH
   );
   const healthRaceStat =
     newCharacter.race.statistics &&
     newCharacter.race.statistics.find(
-      (stat: Statistic) => stat.type === "health"
+      (stat: Statistic) => stat.type === statConst.HEALTH
     );
   const updatedHealth = {
     ...newHealthStat,
@@ -57,12 +64,12 @@ export const createCharacter = (character: any, race: Race) => {
   } as Statistic;
 
   let newManaStat = newCharacter.statistics.find(
-    (stat) => stat.type === "mana"
+    (stat) => stat.type === statConst.MANA
   );
   const manaRaceStat =
     newCharacter.race.statistics &&
     newCharacter.race.statistics.find(
-      (stat: Statistic) => stat.type === "mana"
+      (stat: Statistic) => stat.type === statConst.MANA
     );
   const updatedMana = {
     ...newManaStat,
