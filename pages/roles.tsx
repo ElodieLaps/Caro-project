@@ -1,4 +1,4 @@
-import Layout from '../components/templates/Layout';
+import Layout from '../components/atoms/Layout';
 import { InferGetStaticPropsType } from 'next';
 import roleApi from './api/role';
 import RolesContent, { RolesProps } from '../components/templates/Role';

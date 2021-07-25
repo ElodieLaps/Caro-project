@@ -1,4 +1,4 @@
-import Layout from '../components/templates/Layout';
+import Layout from '../components/atoms/Layout';
 import { InferGetStaticPropsType } from 'next';
 import raceApi from './api/race';
 import RacesContent, { RacesProps } from '../components/templates/Race';

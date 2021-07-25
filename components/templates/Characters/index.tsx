@@ -1,5 +1,5 @@
 import Character from "../../../lib/models/Character";
-import { createCharacters } from "../../../lib/factories/character";
+import { createCharactersList } from "../../../lib/factories/character";
 import CharactersList from "../../organisms/CharactersList";
 import Title from "../../atoms/Title";
 import Race from "../../../lib/models/Race";
@@ -11,7 +11,7 @@ export type CharactersProps = {
 }
 
 const CharactersContent = ({ title, characters, races }: CharactersProps) => {
-   const charactersList = createCharacters(characters, races);
+   const charactersList = createCharactersList(characters, races);
    return (
       <div className="character">
          <Title classname="character__title" text={title} />

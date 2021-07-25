@@ -1,4 +1,4 @@
-import Layout from '../components/templates/Layout';
+import Layout from '../components/atoms/Layout';
 import { InferGetStaticPropsType } from 'next';
 import { HomeProps } from '../components/templates/Home';
 import HomeContent from '../components/templates/Home';

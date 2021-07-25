@@ -9,7 +9,7 @@ export const createRole = (role: any): Role => {
   return newRole;
 };
 
-export const createAllRoles = (roles: Array<any>): Array<Role> => {
+export const createRolesList = (roles: Array<any>): Array<Role> => {
   const rolesList: Array<Role> = [];
   roles.forEach((role: any) => {
     const newRole = createRole(role);

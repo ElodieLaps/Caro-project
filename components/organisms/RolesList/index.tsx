@@ -10,10 +10,12 @@ const RolesList = ({ rolesList }: RolesListType) => {
       <div className="roles-list">
          {rolesList.map((role: Role) => {
             return (
-               <p key={role.name}>{role.name}</p>
+               <div key={role.name} >
+                  < p > {role.name}</p>
+               </div >
             )
          })}
-      </div>
+      </div >
    )
 }
 

@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 //atoms
+@import "../components/atoms/Layout/style.scss";
 @import "../components/atoms/Title/style.scss";
 @import "../components/atoms/Statbar/style.scss";
 @import "../components/atoms/StatItem/style.scss";
@@ -18,7 +19,7 @@
 @import "../components/organisms/RacesList/style.scss";
 
 //template
-@import "../components/templates/Layout/style.scss";
+
 @import "../components/templates/Home/style.scss";
 @import "../components/templates/Characters/style.scss";
 
