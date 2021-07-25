@@ -1,8 +1,10 @@
 import Character from "../../../lib/models/Character";
 import Statistic from "../../../lib/models/Statistic";
+import Equipment from "../../../lib/models/Equipment";
+import * as statConst from "../../../lib/constants/STATISTICS";
 import Statbar from "../../atoms/Statbar";
 import StatItem from "../../atoms/StatItem";
-import * as statConst from "../../../lib/constants/STATISTICS";
+
 
 type CharacterCardType = {
    character: Character;
@@ -34,6 +36,10 @@ const CharacterCard = ({ character }: CharacterCardType) => {
                stat.type === statConst.EXPERIENCE) {
                return <Statbar key={stat.type} statistic={stat} />
             } return <StatItem key={stat.type} statistic={stat} />
+         })}
+
+         {character.equipments.map((equipment: Equipment) => {
+            return <p key={equipment.name}>{equipment.label}</p>
          })}
       </div >
    )

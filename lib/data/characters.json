@@ -27,6 +27,7 @@
         "type": "mana",
         "current": 20
       }
-    ]
+    ],
+    "equipments": ["wooden_stick", "silver_tiara"]
   }
 ]

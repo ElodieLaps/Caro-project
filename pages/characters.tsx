@@ -4,6 +4,8 @@ import { CharactersProps } from '../components/templates/Characters';
 import CharactersContent from '../components/templates/Characters';
 import characterApi from './api/character';
 import raceApi from './api/race';
+import roleApi from './api/role';
+import equipmentsApi from './api/equipment';
 
 type pageProps = {
    pageTitle: string,
@@ -16,6 +18,8 @@ export const getStaticProps = async () => {
    const title = "Les personnages"
    const characters = await characterApi.getAllCharacters();
    const races = await raceApi.getAllRaces();
+   const roles = await roleApi.getAllRoles();
+   const equipments = await equipmentsApi.getAllEquipments();
 
    return {
       props: {
@@ -23,7 +27,9 @@ export const getStaticProps = async () => {
          content: {
             title: title,
             characters: characters,
-            races: races
+            races: races,
+            roles: roles,
+            equipments: equipments
          } as unknown
       } as pageProps,
    }
@@ -37,6 +43,8 @@ const Characters = ({ pageTitle, content }: InferGetStaticPropsType<typeof getSt
                title={content.title}
                characters={content.characters}
                races={content.races}
+               roles={content.roles}
+               equipments={content.equipments}
             />}
          </Layout>
       </div>

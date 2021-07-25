@@ -1,14 +1,30 @@
 import Character from "../models/Character";
 import Statistic from "../models/Statistic";
 import Race from "../models/Race";
+import Role from "../models/Role";
+import Equipment from "../models/Equipment";
 import * as statConst from "../constants/STATISTICS";
 
-export const createCharacter = (character: any, race: Race) => {
+export const createCharacter = (
+  character: any,
+  race: Race,
+  role: Role,
+  equipments: Array<Equipment>
+) => {
   const raceStatistics = race.statistics as Array<Statistic>;
   const statistics = [] as Array<Statistic>;
   raceStatistics.forEach((stat) => {
     statistics.push(stat);
   });
+
+  const characterEquipments: Array<Equipment> = [];
+  character.equipments &&
+    character.equipments.forEach((item: string) => {
+      const newEquipment = equipments.find(
+        (dataItem) => dataItem.name === item
+      ) as Equipment;
+      characterEquipments.push(newEquipment);
+    });
 
   const healthDataStat =
     character.statistics &&
@@ -31,9 +47,10 @@ export const createCharacter = (character: any, race: Race) => {
     character.name,
     character.gender,
     race,
-    character.role,
+    role,
     character.level,
-    statistics
+    statistics,
+    characterEquipments
   );
 
   const newExperienceStat = newCharacter.statistics.find(
@@ -86,14 +103,26 @@ export const createCharacter = (character: any, race: Race) => {
 
 export const createCharactersList = (
   characters: Array<any>,
-  races: Array<Race>
+  races: Array<Race>,
+  roles: Array<Role>,
+  equipments: Array<Equipment>
 ): Array<Character> => {
   const charactersList: Array<Character> = [];
+
   characters.forEach((character: any) => {
     const race = races.find((race) => race.name === character.race) as Race;
-    const newCharacter = createCharacter(character, race);
+    const role = roles.find((role) => role.name === character.role) as Role;
+
+    const newCharacter = createCharacter(character, race, role, equipments);
+
     newCharacter.updateStatisticsWithLevel();
+
+    newCharacter.equipments.forEach((item) => {
+      newCharacter.addEquipment(item);
+    });
+
     charactersList.push(newCharacter);
   });
+  console.log(charactersList);
   return charactersList;
 };

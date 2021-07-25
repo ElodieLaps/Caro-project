@@ -1,6 +1,35 @@
 [
   {
+    "name": "silver_tiara",
+    "label": "tiare argentée",
+    "type": "TIARA",
+    "position": "HEAD",
+    "statistics": [
+      {
+        "type": "dark_power",
+        "value": 5
+      },
+      {
+        "type": "light_power",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "iron_helmet",
+    "label": "heaume de fer",
+    "type": "HELMET",
+    "position": "HEAD",
+    "statistics": [
+      {
+        "type": "armor",
+        "value": 10
+      }
+    ]
+  },
+  {
     "name": "wooden_stick",
+    "label": "baguette de bois",
     "type": "MAGIC_STICK",
     "position": "WEAPON",
     "statistics": [
@@ -20,6 +49,7 @@
   },
   {
     "name": "long_sword",
+    "label": "épée longue",
     "type": "SWORD",
     "position": "WEAPON",
     "statistics": [
@@ -32,6 +62,7 @@
   },
   {
     "name": "poison_knife",
+    "label": "poignard empoisonné",
     "type": "KNIFE",
     "position": "WEAPON",
     "statistics": [
