@@ -29,6 +29,7 @@ const Races = ({ pageTitle, content }: InferGetStaticPropsType<typeof getStaticP
    return (
       <div>
          <Layout pageTitle={pageTitle}>
+            {console.log(content.races)}
             <RacesContent
                title={content.title}
                races={content.races}

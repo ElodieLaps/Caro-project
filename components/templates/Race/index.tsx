@@ -1,4 +1,5 @@
-import Race, { getRaces } from "../../../lib/models/Race";
+import { createAllRaces } from "../../../lib/factories/race";
+import Race from "../../../lib/models/Race";
 import Title from "../../atoms/Title";
 import RacesList from "../../organisms/RacesList";
 
@@ -8,7 +9,7 @@ export type RacesProps = {
 }
 
 const RacesContent = ({ title, races }: RacesProps) => {
-   const racesList = getRaces(races);
+   const racesList = createAllRaces(races);
 
    return (
       <div className="race">
