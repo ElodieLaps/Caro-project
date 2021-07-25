@@ -1,0 +1,45 @@
+[
+  {
+    "name": "wooden_stick",
+    "type": "MAGIC_STICK",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 3
+      },
+      {
+        "type": "dark_power",
+        "value": 5
+      },
+      {
+        "type": "light_power",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "long_sword",
+    "type": "SWORD",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 15
+      }
+    ],
+    "abilities": ["double_attack"]
+  },
+  {
+    "name": "poison_knife",
+    "type": "KNIFE",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 7
+      }
+    ],
+    "abilities": ["poison"]
+  }
+]

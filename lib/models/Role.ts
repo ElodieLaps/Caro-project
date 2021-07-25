@@ -1,14 +1,14 @@
 export default class Role {
   name;
-  availableItemTypes;
+  availableEquipmentTypes;
   availableAbilities;
   constructor(
     name: string,
-    availableItemTypes: Array<any>,
+    availableEquipmentTypes: Array<any>,
     availableAbilities: Array<any>
   ) {
     this.name = name;
-    this.availableItemTypes = availableItemTypes;
+    this.availableEquipmentTypes = availableEquipmentTypes;
     this.availableAbilities = availableAbilities;
   }
 }
