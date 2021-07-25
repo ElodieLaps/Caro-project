@@ -1,17 +1,17 @@
 import Character from "../models/Character";
-import raceApi from "../api/race";
 import Statistic from "../models/Statistic";
 import Race from "../models/Race";
 
-const allRaces = raceApi.getAllRaces();
-
-export const createCharacters = (characters: Array<any>): Array<Character> => {
+export const createCharacters = (
+  characters: Array<any>,
+  races: Array<Race>
+): Array<Character> => {
   const charactersList: Array<Character> = [];
 
   characters.forEach((character: any) => {
-    const characterRace =
-      allRaces &&
-      (allRaces.find((race) => race.name === character.race) as Race);
+    const characterRace = races.find(
+      (race) => race.name === character.race
+    ) as Race;
 
     const characterStatistics = characterRace
       ? (characterRace.statistics as Array<Statistic>)
