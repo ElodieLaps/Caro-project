@@ -28,6 +28,9 @@
         "current": 20
       }
     ],
-    "equipments": ["wooden_stick", "silver_tiara"]
+    "equipments": [
+      { "name": "wooden_stick", "type": "MAGIC_STICK", "position": "WEAPON" },
+      { "name": "silver_tiara", "type": "TIARA", "position": "HEAD" }
+    ]
   }
 ]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "iron_helmet",
+    "label": "heaume de fer",
+    "type": "HELMET",
+    "position": "HEAD",
+    "statistics": [
+      {
+        "type": "armor",
+        "value": 10
+      },
+      {
+        "type": "health",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "name": "silver_helmet",
+    "label": "heaume d'argent",
+    "type": "HELMET",
+    "position": "HEAD",
+    "statistics": [
+      {
+        "type": "armor",
+        "value": 20
+      },
+      {
+        "type": "health",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "name": "golden_helmet",
+    "label": "heaume d'or",
+    "type": "HELMET",
+    "position": "HEAD",
+    "statistics": [
+      {
+        "type": "armor",
+        "value": 40
+      },
+      {
+        "type": "health",
+        "value": 60
+      }
+    ]
+  }
+]

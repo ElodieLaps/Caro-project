@@ -9,7 +9,7 @@ export const createCharacter = (
   character: any,
   race: Race,
   role: Role,
-  equipments: Array<Equipment>
+  equipments: any
 ) => {
   const raceStatistics = race.statistics as Array<Statistic>;
   const statistics = [] as Array<Statistic>;
@@ -17,14 +17,32 @@ export const createCharacter = (
     statistics.push(stat);
   });
 
+  if (character.equipments) {
+    character.equipments.forEach((equipment: any) => {
+      switch (equipment.position) {
+        case "HEAD":
+          switch (equipment.type) {
+            case "TIARA":
+              return console.log(
+                "equip",
+                equipments.head.tiaras.find(
+                  (item: Equipment) => item.name === equipment.name
+                )
+              );
+          }
+      }
+    });
+  }
+
   const characterEquipments: Array<Equipment> = [];
-  character.equipments &&
+
+  /*character.equipments &&
     character.equipments.forEach((item: string) => {
       const newEquipment = equipments.find(
         (dataItem) => dataItem.name === item
       ) as Equipment;
       characterEquipments.push(newEquipment);
-    });
+    });*/
 
   const healthDataStat =
     character.statistics &&
@@ -116,10 +134,9 @@ export const createCharactersList = (
     const newCharacter = createCharacter(character, race, role, equipments);
 
     newCharacter.updateStatisticsWithLevel();
-
-    newCharacter.equipments.forEach((item) => {
+    /*newCharacter.equipments.forEach((item) => {
       newCharacter.addEquipment(item);
-    });
+    });*/
 
     charactersList.push(newCharacter);
   });

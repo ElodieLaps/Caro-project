@@ -7,6 +7,7 @@ import raceApi from './api/race';
 import roleApi from './api/role';
 import equipmentsApi from './api/equipment';
 
+
 type pageProps = {
    pageTitle: string,
    content: CharactersProps
@@ -20,6 +21,7 @@ export const getStaticProps = async () => {
    const races = await raceApi.getAllRaces();
    const roles = await roleApi.getAllRoles();
    const equipments = await equipmentsApi.getAllEquipments();
+
 
    return {
       props: {

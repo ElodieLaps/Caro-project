@@ -1,0 +1,41 @@
+[
+  {
+    "name": "iron_sword",
+    "label": "épée de fer",
+    "type": "SWORD",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 15
+      }
+    ],
+    "abilities": ["double_attack"]
+  },
+  {
+    "name": "silver_sword",
+    "label": "épée d'argent",
+    "type": "SWORD",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 30
+      }
+    ],
+    "abilities": ["double_attack", "blessing_light"]
+  },
+  {
+    "name": "golden_sword",
+    "label": "épée d'or",
+    "type": "SWORD",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 40
+      }
+    ],
+    "abilities": ["double_attack", "blessing_light", "solar_flare"]
+  }
+]

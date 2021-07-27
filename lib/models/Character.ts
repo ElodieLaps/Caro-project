@@ -115,6 +115,12 @@ export default class Character {
           "on fait pour " + stat.type + " " + stat.value + " + " + value
         );
         updatedStatistic = { ...updatedStatistic, value: stat.value + value };
+        if (stat.current) {
+          updatedStatistic = {
+            ...updatedStatistic,
+            current: stat.current + value,
+          };
+        }
         updatedStatistics = [
           ...updatedStatistics,
           (updatedStatistics[index] = updatedStatistic),

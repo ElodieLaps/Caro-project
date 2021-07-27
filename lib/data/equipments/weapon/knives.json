@@ -1,0 +1,40 @@
+[
+  {
+    "name": "iron_knife",
+    "label": "poignard de fer",
+    "type": "KNIFE",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "poison_knife",
+    "label": "poignard empoisonné",
+    "type": "KNIFE",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 10
+      }
+    ],
+    "abilities": ["poison"]
+  },
+  {
+    "name": "deadly_knife",
+    "label": "poignard mortel",
+    "type": "KNIFE",
+    "position": "WEAPON",
+    "statistics": [
+      {
+        "type": "attack_damages",
+        "value": 15
+      }
+    ],
+    "abilities": ["death"]
+  }
+]

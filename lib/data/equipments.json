@@ -24,6 +24,10 @@
       {
         "type": "armor",
         "value": 10
+      },
+      {
+        "type": "health",
+        "value": 15
       }
     ]
   },
