@@ -4,6 +4,7 @@ import Race from "../models/Race";
 import Role from "../models/Role";
 import Equipment from "../models/Equipment";
 import * as statConst from "../constants/STATISTICS";
+import { searchHeadEquipment, searchWeaponEquipment } from "../utils/equipment";
 
 export const createCharacter = (
   character: any,
@@ -17,32 +18,23 @@ export const createCharacter = (
     statistics.push(stat);
   });
 
+  const characterEquipments: Array<Equipment> = [];
+  let newEquipment: Equipment;
   if (character.equipments) {
     character.equipments.forEach((equipment: any) => {
       switch (equipment.position) {
         case "HEAD":
-          switch (equipment.type) {
-            case "TIARA":
-              return console.log(
-                "equip",
-                equipments.head.tiaras.find(
-                  (item: Equipment) => item.name === equipment.name
-                )
-              );
-          }
+          newEquipment = searchHeadEquipment(equipment, equipments);
+          return characterEquipments.push(newEquipment);
+        case "WEAPON":
+          newEquipment = searchWeaponEquipment(equipment, equipments);
+          return characterEquipments.push(newEquipment);
+        default:
+          return console.log("c la merde");
       }
     });
+    console.log("lequip", characterEquipments);
   }
-
-  const characterEquipments: Array<Equipment> = [];
-
-  /*character.equipments &&
-    character.equipments.forEach((item: string) => {
-      const newEquipment = equipments.find(
-        (dataItem) => dataItem.name === item
-      ) as Equipment;
-      characterEquipments.push(newEquipment);
-    });*/
 
   const healthDataStat =
     character.statistics &&
@@ -134,9 +126,9 @@ export const createCharactersList = (
     const newCharacter = createCharacter(character, race, role, equipments);
 
     newCharacter.updateStatisticsWithLevel();
-    /*newCharacter.equipments.forEach((item) => {
+    newCharacter.equipments.forEach((item) => {
       newCharacter.addEquipment(item);
-    });*/
+    });
 
     charactersList.push(newCharacter);
   });

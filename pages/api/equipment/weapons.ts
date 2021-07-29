@@ -1,5 +1,4 @@
 import knives from "../../../lib/data/equipments/weapon/knives.json";
-
 import magic_sticks from "../../../lib/data/equipments/weapon/magic_sticks.json";
 import swords from "../../../lib/data/equipments/weapon/swords.json";
 
