@@ -4,7 +4,7 @@ import Race from "../models/Race";
 import Role from "../models/Role";
 import Equipment from "../models/Equipment";
 import * as statConst from "../constants/STATISTICS";
-import { searchHeadEquipment, searchWeaponEquipment } from "../utils/equipment";
+import findEquipment from "../utils/equipment";
 
 export const createCharacter = (
   character: any,
@@ -24,10 +24,10 @@ export const createCharacter = (
     character.equipments.forEach((equipment: any) => {
       switch (equipment.position) {
         case "HEAD":
-          newEquipment = searchHeadEquipment(equipment, equipments);
+          newEquipment = findEquipment.head(equipment, equipments);
           return characterEquipments.push(newEquipment);
         case "WEAPON":
-          newEquipment = searchWeaponEquipment(equipment, equipments);
+          newEquipment = findEquipment.weapon(equipment, equipments);
           return characterEquipments.push(newEquipment);
         default:
           return console.log("c la merde");
