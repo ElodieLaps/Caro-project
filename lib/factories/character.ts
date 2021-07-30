@@ -5,12 +5,13 @@ import Role from "../models/Role";
 import Equipment from "../models/Equipment";
 import * as statConst from "../constants/STATISTICS";
 import findEquipment from "../utils/equipment";
+import { EquipmentsType } from "../../pages/api/equipment";
 
 export const createCharacter = (
   character: any,
   race: Race,
   role: Role,
-  equipments: any
+  equipments: EquipmentsType
 ) => {
   const raceStatistics = race.statistics as Array<Statistic>;
   const statistics = [] as Array<Statistic>;
@@ -24,16 +25,21 @@ export const createCharacter = (
     character.equipments.forEach((equipment: any) => {
       switch (equipment.position) {
         case "HEAD":
-          newEquipment = findEquipment.head(equipment, equipments);
+          newEquipment = findEquipment.head(
+            equipment,
+            equipments.head
+          ) as Equipment;
           return characterEquipments.push(newEquipment);
         case "WEAPON":
-          newEquipment = findEquipment.weapon(equipment, equipments);
+          newEquipment = findEquipment.weapon(
+            equipment,
+            equipments.weapons
+          ) as Equipment;
           return characterEquipments.push(newEquipment);
         default:
-          return console.log("c la merde");
+          return console.log("pas trouvé ! :(");
       }
     });
-    console.log("lequip", characterEquipments);
   }
 
   const healthDataStat =
@@ -115,7 +121,7 @@ export const createCharactersList = (
   characters: Array<any>,
   races: Array<Race>,
   roles: Array<Role>,
-  equipments: Array<Equipment>
+  equipments: EquipmentsType
 ): Array<Character> => {
   const charactersList: Array<Character> = [];
 

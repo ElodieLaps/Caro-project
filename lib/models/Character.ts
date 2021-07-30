@@ -80,17 +80,12 @@ export default class Character {
     );
 
     if (!itemInPosition) {
-      console.log(equipment.name + " à été ajouté");
       updatedEquipments.push(equipment);
     }
     if (itemInPosition) {
       if (itemInPosition.name === equipment.name) {
-        console.log("cet object est déjà équipé");
       } else {
         let index = this.equipments.indexOf(itemInPosition);
-        console.log(
-          itemInPosition.name + " à été remplacé par " + equipment.name
-        );
         [...updatedEquipments, (updatedEquipments[index] = equipment)];
       }
     }
@@ -111,9 +106,6 @@ export default class Character {
 
     updatedStatistics.forEach((stat, index) => {
       if (stat.type === statistic.type) {
-        console.log(
-          "on fait pour " + stat.type + " " + stat.value + " + " + value
-        );
         updatedStatistic = { ...updatedStatistic, value: stat.value + value };
         if (stat.current) {
           updatedStatistic = {

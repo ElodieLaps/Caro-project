@@ -1,14 +1,18 @@
 import Equipment from "../../lib/models/Equipment";
+import * as types from "../../lib/constants/EQUIPMENTS";
+import { EquipmentRef } from "../../pages/api/equipment";
+import { HeadEquipmentsType } from "../../pages/api/equipment/head";
+import { WeaponEquipmentsType } from "../../pages/api/equipment/weapon";
 
 export const findEquipment = {
-  head: (equipment: Equipment, equipments: any) => {
+  head: (equipment: EquipmentRef, equipments: HeadEquipmentsType) => {
     switch (equipment.type) {
-      case "TIARA":
-        return equipments.head.tiaras.find(
+      case types.TIARA:
+        return equipments.tiaras.find(
           (item: Equipment) => item.name === equipment.name
         );
-      case "HELMET":
-        return equipments.head.helmets.find(
+      case types.HELMET:
+        return equipments.helmets.find(
           (item: Equipment) => item.name === equipment.name
         );
       default:
@@ -16,18 +20,18 @@ export const findEquipment = {
     }
   },
 
-  weapon: (equipment: Equipment, equipments: any) => {
+  weapon: (equipment: EquipmentRef, equipments: WeaponEquipmentsType) => {
     switch (equipment.type) {
-      case "KNIVE":
-        return equipments.weapons.knives.find(
+      case types.KNIFE:
+        return equipments.knives.find(
           (item: Equipment) => item.name === equipment.name
         );
-      case "MAGIC_STICK":
-        return equipments.weapons.magic_sticks.find(
+      case types.MAGIC_STICK:
+        return equipments.magic_sticks.find(
           (item: Equipment) => item.name === equipment.name
         );
-      case "SWORD":
-        return equipments.weapons.swords.find(
+      case types.SWORD:
+        return equipments.swords.find(
           (item: Equipment) => item.name === equipment.name
         );
       default:

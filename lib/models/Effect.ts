@@ -1,10 +1,13 @@
+import State from "../models/State";
 export default class Effect {
-  type; //damage //healing //status
+  name;
   nbTurns;
   value;
-  constructor(type: string, nbTurns: number, value: number) {
-    this.type = type;
+  state;
+  constructor(name: string, nbTurns: number, value: number, state: State) {
+    this.name = name;
     this.nbTurns = nbTurns;
     this.value = value;
+    this.state = state;
   }
 }
