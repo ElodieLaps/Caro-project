@@ -4,6 +4,8 @@ import Equipment from "../../../lib/models/Equipment";
 import * as statConst from "../../../lib/constants/STATISTICS";
 import Statbar from "../../atoms/Statbar";
 import StatItem from "../../atoms/StatItem";
+import { findAvatar } from "../../../lib/constants/AVATAR";
+import Image from 'next/image'
 
 
 type CharacterCardType = {
@@ -11,8 +13,10 @@ type CharacterCardType = {
 }
 
 const CharacterCard = ({ character }: CharacterCardType) => {
+   const picture = findAvatar(character.race.name, character.gender);
    return (
       <div className="character">
+         <Image src={picture} alt={character.name} />
          <p className="character__name">
             {character.name}
             <span className="character__gender">{character.getGender()}</span>
